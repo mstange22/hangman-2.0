@@ -12,7 +12,7 @@ var guessesString = "";
 var emptyWord = [];
 var userWord = [];
 var wordCount = 0;
-var maxWords = 2;
+var maxWords = 50;
 
 var letters = [ "a", "b", "c", "d", "e", "f", "g",
                 "h", "i", "j", "k", "l", "m", "n",
@@ -50,33 +50,14 @@ var randomStateNumber = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14,
 // variable to store the current letter guessed
 var userGuess;
 
-var sound = new Audio();
+//var sound = new Audio();
 
 // When DOM loads, wait for start button click
 $(document).ready(function() {
 
-    $("#welcome-button").on("click", function () {
+    $("#hangman-image").attr("src", "assets/images/hangman-6.png");
 
-        // $("#welcome-header").html("...We are the <i>UNITED</i> States!");
-        $("#hangman-image").attr("src", "assets/images/hangman-6.png");
-
-        wins = 0;
-        losses = 0;
-
-        reset();
-
-        $("#welcome-button").remove();
-
-        $("#reset-button").html("Reset");
-        $("#reset-button").attr("class", "btn btn-primary btn-lg");
-        $("#reset-button").attr("role", "button");
-
-        // $("#hint-button").html("Hint");
-        // $("#hint-button").attr("class", "btn btn-primary btn-lg");
-        // $("#hint-button").attr("role", "button");
-
-        $("#keyboard-container").css("display", "block");
-    });
+    reset();
 });
 
 /*
@@ -162,7 +143,7 @@ function reset() {
     }
 
     else {
-        $("#guesses-used").html("GAME OVER");
+        $("#guesses-used").html("<b>GAME OVER</b>");
     }
 }
 
@@ -207,8 +188,8 @@ function playGame() {
                 // overwrite the emptyWord
                 $("#word-to-guess").html(emptyWord);
 
-                sound.src = "assets/audio/correct.mp3";
-                sound.play();
+                // sound.src = "assets/audio/correct.mp3";
+                // sound.play();
             }
 
             // add guess to guessedLetters
@@ -238,8 +219,8 @@ function playGame() {
 
                 wins++;
 
-                sound.src = "assets/audio/upchime.mp3";
-                sound.play();
+                // sound.src = "assets/audio/upchime.mp3";
+                // sound.play();
 
                 setTimeout(reset, 1000);
             }
@@ -249,8 +230,8 @@ function playGame() {
 
                 losses++;
                 
-                sound.src = "assets/audio/bell-toll.wav";
-                sound.play();
+                // sound.src = "assets/audio/bell-toll.wav";
+                // sound.play();
 
                 $("#word-to-guess").html(wordToGuess);
                 setTimeout(reset,1000);
