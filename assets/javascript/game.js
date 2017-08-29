@@ -170,8 +170,8 @@ function playGame() {
 
                 $("#hangman-image").attr("src", imageLink);
 
-                sound.src = "assets/audio/wrong.wav";
-                sound.play();
+                // sound.src = "assets/audio/wrong.wav";
+                // sound.play();
             }
 
             // userGuess is in wordToGuess
@@ -219,6 +219,8 @@ function playGame() {
 
                 wins++;
 
+                $("#guesses-used").html("<p><b>Correct!</b></p>");
+
                 // sound.src = "assets/audio/upchime.mp3";
                 // sound.play();
 
@@ -229,7 +231,8 @@ function playGame() {
             else if (guesses === 0) {
 
                 losses++;
-                
+
+                $("#guesses-used").html("<p><b>Incorrect</b></p>");
                 // sound.src = "assets/audio/bell-toll.wav";
                 // sound.play();
 
