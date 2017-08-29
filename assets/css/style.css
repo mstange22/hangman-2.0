@@ -1,0 +1,149 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 116px;
+  background-image: url("../images/flag-background.jpg");
+
+}
+
+#nav {
+	height: 60px;
+	border-radius: unset;
+  background-color: #eeeeee;
+}
+
+
+#hangman-nav {
+	margin: 0 auto;
+	max-width: 960px;
+	width: 95%;
+	font-weight: bold;
+	font-size: 28px;
+	color: #000654;
+	padding-top: 7px;
+}
+
+.jumbotron {
+	margin: 0 auto;
+	margin-top: 20px;
+	max-width: 960px;
+	width: 95%;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 5px;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+
+#word-to-guess {
+	font-size: 48px;
+	font-weight: bold;
+	letter-spacing: 15px;
+}
+
+img {
+	padding-top: 30px;
+	display: block;
+	margin: auto;
+	width: 200px;
+}
+
+#status {
+	padding-top: 60px;
+}
+
+.btn.btn-primary.btn-lg {
+	clear: both;
+	margin: 5px auto;
+	max-width: 100%;
+	width: 80px;
+	background-color: #000654;
+	border-color: black;
+}
+
+.btn.btn-primary.btn-lg:hover {
+	background-color: #d42729;
+}
+
+#start-message {
+	margin-top: 20px;
+	font-weight: bold;
+	color: #d42729;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+
+  /* Set the fixed height of the footer here */
+  height: 116px;
+  background-color: #eeeeee;
+  border-top: 1px solid black;
+}
+
+/* hide the keyboard on welcome screen */
+#keyboard-container {
+	display: none;
+}
+
+.key-container.top{
+	margin: 0 auto;
+	width: 377.5px;
+	padding: 0;
+}
+
+.key-container.middle{
+	margin: 0 auto;
+	width: 339.75px;
+	padding: 0;
+}
+
+.key-container.bottom{
+	margin: 0 auto;
+	width: 264.25px;
+	padding: 0;
+}
+
+.key {
+	display: block;
+	float: left;
+	width: 36px;
+	height: 36px;
+	margin-top: 1.75px;
+	margin-left: .875px;
+	margin-right: .875px;
+	border: 1px solid #000000;
+	border-radius: 6px;
+	background-color: #ffffff;
+	text-align: center;
+	font-size: 18px;
+	color: #000000;
+	padding: 0;
+	padding-top: 4.5px;
+}
+
+.key:hover {
+	background-color: #000654;
+}
+
+.key:focus {
+	background-color: #d42729;
+}
+
+.key:active {
+	background-color: #000654;
+}
+
+@media (min-width: 768px) {
+
+	.navbar {
+		border-radius: unset;
+		background-color: #ffffff;
+	}
+
+}

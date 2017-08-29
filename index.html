@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hangman - U.S States (Beta)</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+    <nav id="nav">
+        <div id="hangman-nav">Hangman 2.0 (Beta)</li>
+        </div>
+    </nav>
+    <div class="jumbotron">  
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="welcome-button" class="btn btn-primary btn-lg">Start</div>
+                    <!-- Buttons to be created dynamically -->
+                    <div id="reset-button"></div>
+                    <div id="hint-button"> </div>
+                  </div>
+            </div>          
+            <div class="row">
+                <div class="col-md-6 col-sm-6 col-xs-6" id="hangman-container">
+                    <!-- Hangman image inserted dynamically -->
+                    <img id="hangman-image" src="">
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <div id="status">
+                    <!-- Game status will be updated here -->
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Guesses will be updted dynamically -->
+                    <h3 id="guesses-used"></h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="word-to-guess">
+                    <!-- Guessed word will be inserted here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="spacer"></div>
+            </div>
+        </div>
+    </div>
+    <audio source src="" type="audio/mpeg"></audio>
+    <footer class="footer">
+        <div id="keyboard-container" class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="key-container top">
+                    <div class="btn btn-primary btn-sm key" letter="q">Q</div>
+                    <div class="btn btn-primary btn-sm key" letter="w">W</div>
+                    <div class="btn btn-primary btn-sm key" letter="e">E</div>
+                    <div class="btn btn-primary btn-sm key" letter="r">R</div>
+                    <div class="btn btn-primary btn-sm key" letter="t">T</div>
+                    <div class="btn btn-primary btn-sm key" letter="y">Y</div>
+                    <div class="btn btn-primary btn-sm key" letter="u">U</div>
+                    <div class="btn btn-primary btn-sm key" letter="i">I</div>
+                    <div class="btn btn-primary btn-sm key" letter="o">O</div>
+                    <div class="btn btn-primary btn-sm key" letter="p">P</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="key-container middle">
+                    <div class="btn btn-primary btn-sm key" letter="a">A</div>
+                    <div class="btn btn-primary btn-sm key" letter="s">S</div>
+                    <div class="btn btn-primary btn-sm key" letter="d">D</div>
+                    <div class="btn btn-primary btn-sm key" letter="f">F</div>
+                    <div class="btn btn-primary btn-sm key" letter="g">G</div>
+                    <div class="btn btn-primary btn-sm key" letter="h">H</div>
+                    <div class="btn btn-primary btn-sm key" letter="j">J</div>
+                    <div class="btn btn-primary btn-sm key" letter="k">K</div>
+                    <div class="btn btn-primary btn-sm key" letter="l">L</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="key-container bottom">
+                        <div id="z-button" class="btn btn-primary btn-sm key" letter="z">Z</div>
+                        <div id="x-button" class="btn btn-primary btn-sm key" letter="x">X</div>
+                        <div id="c-button" class="btn btn-primary btn-sm key" letter="c">C</div>
+                        <div id="v-button" class="btn btn-primary btn-sm key" letter="v">V</div>
+                        <div id="b-button" class="btn btn-primary btn-sm key" letter="b">B</div>
+                        <div id="n-button" class="btn btn-primary btn-sm key" letter="n">N</div>
+                        <div id="m-button" class="btn btn-primary btn-sm key" letter="m">M</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+</html
