@@ -33,14 +33,14 @@ h1 {
 
 .jumbotron {
 	margin: 0 auto;
-	margin-top: 20px;
+	margin-top: 15px;
 	max-width: 960px;
 	width: 95%;
 	text-align: center;
 	border: 2px solid black;
 	border-radius: 5px;
 	padding: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 15px;
 }
 
 #word-to-guess {
