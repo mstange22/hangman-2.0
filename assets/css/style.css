@@ -40,7 +40,7 @@ h1 {
 	border: 2px solid black;
 	border-radius: 5px;
 	padding: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 45px;
 }
 
 #word-to-guess {
@@ -116,12 +116,24 @@ img {
 	padding-top: 4.5px;
 }
 
-.key:hover {
-	background-color: #000654;
+#pop-up-key {
+    position: absolute;
+    top: -50px;
+    left: -8px;
+	width: 48px;
+	height: 48px;
+	font-size: 24px;
+	padding-top: 5.5px;
 }
 
-.key:focus {
+.btn.btn-primary.btn-sm.key:hover {
 	background-color: #ffffff;
+	color: #000000;
+}
+
+.btn.btn-primary.btn-sm.key:focus {
+	background-color: #ffffff;
+	color: #000000;
 }
 
 .btn.btn-primary.btn-sm.key:active {
@@ -131,6 +143,7 @@ img {
 
 .btn.btn-primary.btn-sm.key:visited {
 	background-color: #ffffff;
+	color: #000000;
 }
 
 @media (min-width: 768px) {

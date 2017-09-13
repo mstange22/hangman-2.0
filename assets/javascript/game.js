@@ -254,16 +254,19 @@ $(".key").on("click", function () {
 
 });
 
-$(".key").on("active", function () {
+$(".key").on("mouseout", function () {
+
+    $("#pop-up-key").remove();
+});
+
+$(".key").on("mouseover", function () {
 
     newDiv = $("<div>");
     newDiv.attr("id", "pop-up-key")
     newDiv.addClass("key");
-    newDiv.css("position", "absolute");
     newDiv.css("display", "block");
-    newDiv.css("top", "-36px");
-    newDiv.text($(this).attr("letter"));
-    playGame();
+    newDiv.text($(this).attr("letter").toUpperCase());
+    $(this).append(newDiv);
 });
 
 $("#reset-button").on("click", function () {
