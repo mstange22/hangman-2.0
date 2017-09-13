@@ -248,18 +248,13 @@ document.onkeyup = function(event) {
 $(".key").on("click", function () {
 
     userGuess = $(this).attr("letter");
-    $("#pop-up-key").css("display", "none");
+    $("#pop-up-key").remove();
 
     playGame()
 
 });
 
-$(".key").on("mouseout", function () {
-
-    $("#pop-up-key").remove();
-});
-
-$(".key").on("mouseover", function () {
+$(".key").on("focus", function () {
 
     newDiv = $("<div>");
     newDiv.attr("id", "pop-up-key")
