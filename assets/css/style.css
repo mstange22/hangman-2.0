@@ -28,7 +28,7 @@ h1 {
 	font-weight: bold;
 	font-size: 28px;
 	color: #000654;
-	padding-top: 7px;
+	padding-top: 5px;
 }
 
 .jumbotron {
@@ -40,7 +40,7 @@ h1 {
 	border: 2px solid black;
 	border-radius: 5px;
 	padding: 20px;
-	margin-bottom: 45px;
+	margin-bottom: 15px;
 }
 
 #word-to-guess {
