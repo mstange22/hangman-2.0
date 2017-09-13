@@ -76,8 +76,7 @@ img {
   bottom: 0;
   width: 100%;
   height: 116px;
-  background-color: #eeeeee;
-  border-top: 1px solid black;
+  background-color: transparent;
 }
 
 .key-container.top{
@@ -100,6 +99,7 @@ img {
 
 .key {
 	display: block;
+	position: relative;
 	float: left;
 	width: 36px;
 	height: 36px;
@@ -121,10 +121,15 @@ img {
 }
 
 .key:focus {
-	background-color: #d42729;
+	background-color: #ffffff;
 }
 
-.key:active {
+.btn.btn-primary.btn-sm.key:active {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.btn.btn-primary.btn-sm.key:visited {
 	background-color: #ffffff;
 }
 

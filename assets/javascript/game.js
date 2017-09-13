@@ -1,9 +1,6 @@
-/*
- * Hangman!
- * Michael Stange
- * UCSD Coding Boot Camp - Assignment #3
- */
+const maxWords = 50;
 
+var score = 0;
 var wins = 0;
 var losses = 0;
 var guesses = 6;                
@@ -12,7 +9,6 @@ var guessesString = "";
 var emptyWord = [];
 var userWord = [];
 var wordCount = 0;
-var maxWords = 50;
 
 var letters = [ "a", "b", "c", "d", "e", "f", "g",
                 "h", "i", "j", "k", "l", "m", "n",
@@ -52,11 +48,8 @@ var userGuess;
 
 //var sound = new Audio();
 
-// When DOM loads, wait for start button click
+// When DOM loads, reset to init.
 $(document).ready(function() {
-
-    $("#hangman-image").attr("src", "assets/images/hangman-6.png");
-
     reset();
 });
 
@@ -119,7 +112,7 @@ function reset() {
     guesses = 6;
 
     // Refresh display
-    var refreshedHTML =  "<p>Wins: " + wins + "</p>" +
+    var refreshedHTML =     "<p>Wins: " + wins + "</p>" +
                             "<p>Losses: " + losses + "</p>" +
                             "<p>Guesses Left: 6</p>";
 
@@ -255,9 +248,22 @@ document.onkeyup = function(event) {
 $(".key").on("click", function () {
 
     userGuess = $(this).attr("letter");
+    $("#pop-up-key").css("display", "none");
 
     playGame()
 
+});
+
+$(".key").on("active", function () {
+
+    newDiv = $("<div>");
+    newDiv.attr("id", "pop-up-key")
+    newDiv.addClass("key");
+    newDiv.css("position", "absolute");
+    newDiv.css("display", "block");
+    newDiv.css("top", "-36px");
+    newDiv.text($(this).attr("letter"));
+    playGame();
 });
 
 $("#reset-button").on("click", function () {
